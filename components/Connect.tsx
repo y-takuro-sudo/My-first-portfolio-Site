@@ -50,7 +50,7 @@ const Connect: React.FC = () => {
 
   return (
     <div className="max-w-4xl mx-auto">
-      <h2 className="text-3xl md:text-5xl font-bold mb-12 tracking-tight">Connect / SNS</h2>
+      <h2 className="text-3xl md:text-5xl font-bold mb-12 tracking-tight text-white">Connect / SNS</h2>
       
       <div className="grid gap-6">
         {socials.map((social) => (
@@ -59,19 +59,19 @@ const Connect: React.FC = () => {
             href={social.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="group block p-6 md:p-8 bg-neutral-900/50 border border-neutral-800 rounded-lg hover:bg-neutral-800 transition-all hover:border-neutral-600"
+            className="group block p-6 md:p-8 bg-neutral-900/30 border border-neutral-900 rounded-lg hover:bg-neutral-900 hover:border-white transition-all duration-300"
           >
             <div className="flex items-start md:items-center space-x-6">
-              <div className="p-4 bg-neutral-950 rounded-full text-neutral-300 group-hover:text-cyan-400 transition-colors border border-neutral-800">
+              <div className="p-4 bg-black rounded-full text-neutral-400 group-hover:text-white group-hover:bg-neutral-900 transition-colors border border-neutral-800 group-hover:border-white">
                 {getIcon(social.iconName)}
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors mb-1">
+                <h3 className="text-xl font-bold text-white group-hover:text-white transition-colors mb-1">
                   {social.platform}
                 </h3>
-                <p className="text-sm font-medium text-neutral-400 mb-2">{social.username}</p>
+                <p className="text-sm font-medium text-neutral-500 mb-2 group-hover:text-neutral-300 transition-colors">{social.username}</p>
                 {social.description && (
-                  <p className="text-sm text-neutral-500 font-light leading-relaxed">
+                  <p className="text-sm text-neutral-600 font-light leading-relaxed group-hover:text-neutral-400 transition-colors">
                     {social.description}
                   </p>
                 )}

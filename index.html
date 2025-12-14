@@ -11,9 +11,9 @@
           extend: {
             colors: {
               mnv: {
-                light: '#4facfe',
-                DEFAULT: '#00f2fe',
-                dark: '#00c6fb',
+                light: '#ffffff',
+                DEFAULT: '#ffffff',
+                dark: '#888888',
               }
             },
             fontFamily: {
@@ -27,7 +27,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Fira+Code&display=swap" rel="stylesheet">
     <style>
       body {
-        background-color: #171717;
+        background-color: #000000;
         color: #f3f4f6;
       }
       /* Custom Scrollbar for Webkit */
@@ -35,7 +35,7 @@
         width: 8px;
       }
       ::-webkit-scrollbar-track {
-        background: #171717; 
+        background: #000000; 
       }
       ::-webkit-scrollbar-thumb {
         background: #333; 
@@ -51,7 +51,11 @@
     "react/": "https://esm.sh/react@^19.2.3/",
     "react": "https://esm.sh/react@^19.2.3",
     "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.561.0"
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "path": "https://esm.sh/path@^0.12.7",
+    "vite": "https://esm.sh/vite@^7.2.7",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "url": "https://esm.sh/url@^0.11.4"
   }
 }
 </script>
@@ -59,6 +63,5 @@
 <body>
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
-</body>
 </body>
 </html>

@@ -44,28 +44,28 @@ const Works: React.FC = () => {
 
   return (
     <div>
-      <h2 className="text-3xl md:text-5xl font-bold mb-12 tracking-tight">Selected Works</h2>
+      <h2 className="text-3xl md:text-5xl font-bold mb-12 tracking-tight text-white">Selected Works</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
         {works.map((work) => (
           <div key={work.id} className="flex flex-col group">
             {/* Image Card Area */}
-            <div className="relative aspect-[4/3] bg-neutral-900 rounded-lg overflow-hidden border border-neutral-800 hover:border-neutral-600 transition-colors">
+            <div className="relative aspect-[4/3] bg-neutral-900 rounded-lg overflow-hidden border border-neutral-900 hover:border-white transition-colors duration-500">
               {/* Image */}
               <img 
                 src={work.imageUrl} 
                 alt={work.title}
-                className={`w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 ${work.isComingSoon ? 'opacity-30' : 'opacity-90 group-hover:opacity-100'}`}
+                className={`w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 filter grayscale hover:grayscale-0 ${work.isComingSoon ? 'opacity-30' : 'opacity-80 group-hover:opacity-100'}`}
               />
 
               {/* Overlay Content */}
-              <div className="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none">
+              <div className="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black via-black/40 to-transparent pointer-events-none">
                 <h3 className="text-xl font-bold text-white mb-1">
                   {work.title}
                 </h3>
                 
                 {!work.isComingSoon && work.url ? (
-                  <div className="flex items-center text-cyan-400 text-sm font-medium">
+                  <div className="flex items-center text-white text-sm font-medium">
                     View Project <ExternalLink size={14} className="ml-1" />
                   </div>
                 ) : (
@@ -89,13 +89,13 @@ const Works: React.FC = () => {
             <div className="mt-3">
               <button
                 onClick={() => toggleDescription(work.id)}
-                className="flex items-center text-sm text-neutral-400 hover:text-white transition-colors focus:outline-none group/btn"
+                className="flex items-center text-sm text-neutral-500 hover:text-white transition-colors focus:outline-none group/btn"
               >
-                <span className="mr-2 uppercase tracking-wider text-xs font-bold group-hover/btn:text-cyan-400 transition-colors">Details</span>
+                <span className="mr-2 uppercase tracking-wider text-xs font-bold group-hover/btn:text-white transition-colors">Details</span>
                 {expandedId === work.id ? (
-                  <ChevronUp size={16} className="text-cyan-400" />
+                  <ChevronUp size={16} className="text-white" />
                 ) : (
-                  <ChevronDown size={16} className="group-hover/btn:text-cyan-400 transition-colors" />
+                  <ChevronDown size={16} className="group-hover/btn:text-white transition-colors" />
                 )}
               </button>
 
@@ -104,7 +104,7 @@ const Works: React.FC = () => {
                   expandedId === work.id ? 'max-h-40 opacity-100 mt-3' : 'max-h-0 opacity-0 mt-0'
                 }`}
               >
-                <p className="text-neutral-400 text-sm leading-relaxed border-l-2 border-neutral-800 pl-4 py-1">
+                <p className="text-neutral-400 text-sm leading-relaxed border-l-2 border-white pl-4 py-1">
                   {work.description}
                 </p>
               </div>
