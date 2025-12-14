@@ -5,7 +5,9 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
-    　base: '/My-first-portfolio-Site/',
+      // ★ここが修正ポイント！一文字一句正確に合わせました
+      base: '/My-first-portfolio-Site/',
+
       server: {
         port: 3000,
         host: '0.0.0.0',
